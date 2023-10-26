@@ -11,11 +11,11 @@
     $message = @trim(stripslashes($_POST['message'])); 
 
     $email_from = $email;
-    $email_to = 'aprl@ucdavis.edu, aligangeh@ucdavis.edu, rjbutcher@ucdavis.edu, eqzhou@ucdavis.edu';
+   //  $email_to = 'aprl@ucdavis.edu, aligangeh@ucdavis.edu, rjbutcher@ucdavis.edu, evazq';
     
     $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Phone: ' . $phone . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
 
-    $success = @mail($email_to, $subject, $body, 'From: <'.$email_from.'>');
+    $success = @mail("aprl@ucdavis.edu", $subject, $body, 'From: <'.$email_from.'>');
 
     echo json_encode($status);
     die;
