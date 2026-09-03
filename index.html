@@ -29,6 +29,10 @@
 
     <!-- Plugins -->
     <link rel="stylesheet" href="css/plugins.css" />
+    <link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+  rel="stylesheet"
+>
 
     <!-- Core Style Css -->
     <link rel="stylesheet" href="css/style.css" />
@@ -49,18 +53,18 @@
     <!-- End page loading -->
 
     <!-- Start Header -->
-    <header class="header valign bg-img no-transition mobile-height-70vh mb-bg-position-x-center" data-scroll-index="0"
+    <header class="header valign bg-img no-transition mobile-height-70vh mb-bg-position-x-center relative" data-scroll-index="0"
         data-overlay-dark="3">
         <!-- Prev. version had data-background="img/space/stars_sized.jpg" data-stellar-background-ratio="0.5" -->
 
         <!-- Start Navbar -->
         <nav class="navbar navbar-expand-lg border-none">
-            <div class="container sm-padding-10px-tb sm-padding-15px-lr">
+            <div class="container sm-padding-10px-tb relative">
 
                 <!-- start logo -->
                 <!--  -->
-                <img class="logo no-padding" style="width: 150pt; margin: 10pt;"
-                    src="APRL_branding/ICON_WITH_WORDMARK/RGB_WhiteOnTransparent_NoStars/APRL_Constellation_WORDMARK_WhiteOnTransparentPath.png"
+                <img class="logo no-padding " style="width: 70pt; margin: 10pt;"
+                    src="img\APRL_branding\new_APRL_logo.png"
                     alt="APRL_logo" title="Aggie Propulsion & Rocketry Lab">
                 <!-- end Logo -->
 
@@ -71,40 +75,43 @@
 
                 <!-- navbar links -->
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="ml-auto">
                         <li class="nav-item">
                             <a class="nav-link active" href="javascript:void(0);" data-scroll-nav="0">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">Our Mission</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="5">Donate</a>
+                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">Subteams</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">Leadership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">The APRL Archives</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">Support Us!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">Sponsor Us!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="5">Contact</a>
                         </li>
 
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="3">About The Team</a>
-                        </li>
-                        -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="6">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="2">Subteams</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="4">Our team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-scroll-nav="7">Contact</a>
-                        </li>
+                        
                     </ul>
                 </div>
                 <!-- end navbar links -->
-
+                
             </div>
             <!--
             <a href="javascript:void(0)" class="sidemenu_btn sm-display-none" id="sidebar_toggle">
@@ -113,14 +120,25 @@
             -->
         </nav>
         <!-- End Navbar  -->
-        
+        <div class="blurb-1">
+            <p>Building the first liquid rocket at UC Davis</p>
+            <p>While making rocketry accessible to all.</p>
+        </div>
+        <div class="blurb-2">
+            <p>Aggie Propulsion & Rocketry Lab</p>
+            <div class="tagline">
+                <div class="white-line"></div>
+                <p class="text-uppercase pun">When cows fly</p>
+            </div>
+        </div>
         <section id="intro">
-            <video autoplay muted loop id="intro_vid">
+            <video autoplay muted id="intro_vid">
                 <source src="intro_vid.mp4#t=1" type="video/mp4">
             </video>
+            <div class="video-overlay"></div>
             <div class="bg-fade"></div>
             <div class="intro-logo fade-logo">
-                <img src="APRL_branding/psd_export/worm.png" alt="APRL Worm Logo" style="width: 300pt;" />
+                <img src="img\APRL_branding\new_simple_logo.png" alt="APRL Worm Logo" style="width: 200pt;" />
             </div>
         </section>
         <div class="container">
@@ -1253,7 +1271,7 @@
         <script src="js/bootstrap.min.js"></script>
 
         <!-- scrollIt -->
-        <script src="js/scrollIt.min.js"></script>
+        <!-- <script src="js/scrollIt.min.js"></script> -->
 
         <!-- animated.headline -->
         <script src="js/animated.headline.js"></script>
@@ -1289,6 +1307,8 @@
 
         <!-- sponsors script -->
         <script src="js/sponsors.js"></script>
+
+        <script src="js/background.js"></script>
 
         <!-- members script -->
         <!-- <script src="js/teammember.js"></script> -->

@@ -34,6 +34,11 @@ Table of contents
     Added accordian bs:
 ---------------------------------- */
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600; /* SemiBold */
+}
+
 /*============================== 
     Basic
 ================================*/
@@ -45,6 +50,11 @@ Table of contents
   min-width: 100%;
   min-height: 100%;
   z-index: 0;
+  transition: opacity 1.5s ease;
+}
+
+#hero-video.fade-out {
+  opacity: 0;
 }
 
 #intro{
@@ -52,6 +62,7 @@ Table of contents
   min-height: 100vh;
   min-width: 100vw;
   overflow: hidden;
+  background: #4303CB
 }
 
 /* loader */
@@ -457,6 +468,8 @@ a:active {
 ================================*/
 .navbar {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   left: 0;
   top: 0;
   width: 100%;
@@ -479,7 +492,8 @@ a:active {
 .navbar .navbar-nav .nav-link {
   font-size: 14px;
   font-weight: 600;
-  color: #eee;
+  color: #fff;
+  font-size: 16px;
   letter-spacing: .5px;
   margin: 0;
   padding: 10px 15px;
@@ -497,7 +511,20 @@ a:active {
   position: relative;
 }
 
-.nav-scroll {
+.nav-link {
+  padding: 0.3rem;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: right;
+}
+
+#navbarContent{
+ position: absolute;
+ top: 40px;
+ right: 20px;
+}
+
+/* .nav-scroll {
   background: #fff;
   box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0.6);
   position: fixed;
@@ -522,7 +549,7 @@ a:active {
 
 .nav-scroll .navbar-nav .logo {
   padding: 15px 0;
-}
+} */
 
 /*header bg-theme */
 .navbar.bg-theme {
@@ -2036,9 +2063,6 @@ ul.countdown li p.timeRefSeconds {
 }
 
 @media screen and (max-width: 1399px) {
-  .navbar>.container {
-    padding-right: 3.5rem;
-  }
 
   .sidemenu_btn {
     margin-right: 0;
@@ -2054,6 +2078,7 @@ ul.countdown li p.timeRefSeconds {
 @media screen and (max-width: 991px) {
   .navbar>.container {
     padding-right: 0;
+    margin-right: 0;
   }
 
   .navbar {
@@ -2073,7 +2098,10 @@ ul.countdown li p.timeRefSeconds {
 
   .navbar .nav-link {
     display: block;
+    color: white;
+    font-size: 16px;
   }
+
 
   .navbar .navbar-nav .active:after {
     width: 100%;
@@ -2180,7 +2208,9 @@ ul.countdown li p.timeRefSeconds {
     font-size: 18px;
   }
 }
-
+nav .container {
+  padding-right: 0;
+}
 @media screen and (max-width: 767px) {
   .portfolio .items {
     margin-top: 20px;
@@ -2256,6 +2286,10 @@ ul.countdown li p.timeRefSeconds {
   background: #fff !important;
 }
 
+.logo{
+  position: absolute;
+  top: 25px;
+}
 .intro-logo {
   position: absolute;
   inset: 0;
@@ -2273,8 +2307,8 @@ ul.countdown li p.timeRefSeconds {
 .fade-logo {
   opacity: 0;
   animation-name: fadeInLogo;
-  animation-duration: 3s;
-  animation-delay: 6s;
+  animation-duration: 2.5s;
+  animation-delay: 5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
@@ -2290,37 +2324,61 @@ ul.countdown li p.timeRefSeconds {
     transform: translateY(0);
   }
 }
-
+.video-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 3;
+}
 .bg-fade {
   position: absolute;
   inset: 0;
   z-index: 2;
   overflow: hidden;
   opacity: 0;
-
-  animation: fadeInStars 4s ease-out forwards;
-  animation-delay: 10s;
+  transition: opacity 1.5s ease;
 }
 
 .bg-fade::before {
   content: "";
   position: absolute;
-  inset: -20%;
+  inset: 0;
 
-  background:
-    /* semi-transparent black overlay */
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
-    /* actual star image */
-    url("../img/space/stars_sized.jpg");
+ background:
+    /* pink/red glow on left */
+    radial-gradient(
+      circle at 0% 15%,
+      rgba(202, 50, 96, 0.55) 0%,
+      rgba(212, 109, 165, 0.35) 30%,
+      rgba(0, 0, 0, 0.3) 58%
+    ),
+
+    /* softer pink glow on right */
+    radial-gradient(
+      circle at 100% 15%,
+      rgba(237, 165, 201, 0.65) 0%,
+      rgba(231, 143, 169, 0.35) 22%,
+      rgba(201, 191, 222, 0) 48%
+    ),
+
+    /* main background */
+    #4303CB;
 
   background-size: cover;
   background-position: center;
+}
 
-  /* 
+.bg-fade.show {
+  opacity: 1;
+}
+
+/*
+
+  
     -webkit to ensure iphone and safari compatibility to implement masking 
     -percentages is progress of circle expansion (center = 0%, edge = 100%)
     -mask visibility weakens farther from the center
-  */
+  
   -webkit-mask-image: radial-gradient(
   circle,
   rgba(0,0,0,1) 20%,
@@ -2333,50 +2391,49 @@ ul.countdown li p.timeRefSeconds {
   rgba(0,0,0,0.2) 90%,
   transparent 100%
 );
-/* controls which parts of stars are visible */
-mask-image: radial-gradient(
-  circle,
-  rgba(0,0,0,1) 20%,
-  rgba(0,0,0,0.95) 30%,
-  rgba(0,0,0,0.9) 40%,
-  rgba(0,0,0,0.8) 50%,
-  rgba(0,0,0,0.65) 60%,
-  rgba(0,0,0,0.5) 70%,
-  rgba(0,0,0,0.35) 80%,
-  rgba(0,0,0,0.2) 90%,
-  transparent 100% /*invisible at outer edge to avoid harsh circle*/
-);
 
-  transform: scale(0);
-  transform-origin: center;
-
-  /* cubic bezier for slow start, fast middle, and gentle finishing of animation */
-  animation: expandStars 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 9.5s;
-}
-
-@keyframes fadeInStars {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.75;
-  }
-}
-
-/* reveal stars- animation */
-@keyframes expandStars {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1.5);
-  }
-}
 
 .row.about {
   justify-content: center;
   margin-left: 0;
   margin-right: 0;
 }
-/*# sourceMappingURL=style.css.map */
+# sourceMappingURL=style.css.map
+*/
+
+/*new CSS -- to be organized later*/
+.blurb-1{
+  position: absolute;
+  left: 80px;
+  bottom: 40px;
+  border-left: 3px solid white;
+  padding-left: 20px;
+  z-index: 5;
+}
+.blurb-1 p{
+  color: white;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+}
+.white-line {
+  width: 110px;
+  height: 2px;
+  background: white;
+}
+.blurb-2{
+  position: absolute;
+  z-index:5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  right: 80px;
+  bottom: 40px;
+}
+.blurb-2 p {
+  color: white;
+  margin-bottom: 5px;
+}

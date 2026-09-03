@@ -59,10 +59,12 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 a,
 a:active,
 a:focus {
-    color: #6f6f6f;
+    color: white;
+    font-size: 16px;
     text-decoration: none;
     transition-timing-function: ease-in-out;
     -ms-transition-timing-function: ease-in-out;
