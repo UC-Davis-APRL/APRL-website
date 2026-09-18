@@ -148,3 +148,22 @@ a{
     padding-left: 50px;
     padding-bottom: 50px;
 }
+
+@media (max-width: 440px){
+    .description{
+        width: 100%;
+    }
+    .overview-section{
+        flex-direction: column;
+    }
+    .red-stripe{
+        border-left: none;
+        border-top: #ff1d38 3px solid;
+    }
+    .project-img img{
+        margin: auto;
+    }
+    .project-img{
+        padding: 10px;
+    }
+}

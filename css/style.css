@@ -33,6 +33,17 @@ Table of contents
 
     Added accordian bs:
 ---------------------------------- */
+:root {
+  --dark-gray: #191717;
+  --beige: #F9E4BC;
+  --violet: #D46DA5;
+  --dark-blue: #4304CB;
+  --light-blue: #355DFF;
+  --red: #FF1D38;
+  --yellow: #FFC862;
+  --orange: #FF8A48;
+}
+
 html,
 body {
   max-width: 100%;
@@ -47,11 +58,26 @@ body {
 }
 
 .content-container {
-  width: 1200px;
+  /* width: 1200px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 1200px;
+  max-width: 1200px;
+  min-width: 300px;
+  width: 90%;
+  width: clamp(320px, 90%, 1200px);
+  padding: 20px;
+  margin: auto;
+}
+
+
 
 /*============================== 
     Basic
@@ -641,6 +667,7 @@ SPAN.line_item {
 .header {
   height: 100vh;
   max-height: 1200px;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -2428,12 +2455,33 @@ nav .container {
   justify-content: space-between;
 }
 
-.my-div {
-  position: relative;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  z-index: 5;
+
+
+@media (max-width: 440px) {
+  .my-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blurb2 {
+    display: none;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 1920px) {
+  .my-div {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+  }
+
 }
 
 .tagline {
@@ -2471,18 +2519,21 @@ p.pun {
 }
 
 #about-section {
-  padding-top: 3rem;
+  padding-top: clamp(1.5rem, 5vw, 3rem);
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 #about-section p {
-  font-size: 20px;
+  font-size: clamp(13px, 3.5vw, 20px);
   text-align: left;
   color: black;
 }
 
 .heading {
   color: #ff1d38;
-  font-size: 28px;
+  font-size: clamp(20px, 5vw, 28px);
   font-weight: 700;
   text-align: center;
 }
@@ -2491,8 +2542,8 @@ p.pun {
   top: -5px;
   left: -45px;
   position: absolute;
-  width: 35px;
-  height: 35px;
+  width: clamp(25px, 6vw, 35px);
+  aspect-ratio: 1;
   background-color: #ff1d38;
   opacity: 30%;
   border-radius: 50%;
@@ -2501,16 +2552,36 @@ p.pun {
 .mission {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .mission-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   padding-top: 1.5rem;
   padding-bottom: 3rem;
   padding-left: 35px;
+}
+
+@media (max-width: 440px) {
+  .mission-list {
+    gap: 20px;
+    width: clamp(320px, 90%, 1200px);
+    margin: auto;
+  }
+
+  .top-text,
+  .bottom-text {
+    text-align: left;
+  }
+
+  .mission-text {
+    width: 90%;
+  }
+
 }
 
 .mission-text {
@@ -2520,7 +2591,7 @@ p.pun {
 }
 
 .top-text {
-  font-size: 25px;
+  font-size: clamp(18px, 3.5vw, 25px);
 }
 
 .line-divider {
@@ -2534,7 +2605,14 @@ p.pun {
 .section-head {
   color: black;
   font-weight: 700;
-  font-size: 35px;
+  font-size: clamp(27px, 6.5vw, 35px);
+  padding-top: 50px;
+}
+
+@media (max-width: 440px){
+  .section-head{
+    padding-top:20px;
+  }
 }
 
 #projects {
@@ -2582,7 +2660,7 @@ p.pun {
 }
 
 #propfeed {
-  border-left: 40px solid #4303cb;
+  border-color: #4303cb;
 }
 
 #airframe {
@@ -2610,6 +2688,10 @@ p.pun {
   flex-direction: column;
   gap: 10px;
   padding-top: 20px;
+
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
 }
 
 .sub-name,
@@ -2617,6 +2699,8 @@ p.pun {
   display: flex;
   flex-direction: column;
 }
+
+
 
 .sub-name {
   margin-top: 20px;
@@ -2673,4 +2757,67 @@ button:hover {
 
 .project.hide {
   display: none;
+}
+
+.empty-text{
+  display: none;
+}
+.my-div{
+  display: flex;
+width: 100%;
+max-width: 1200px;
+justify-content: space-between;
+}
+@media (max-width: 440px) {
+ 
+  .project,
+  .overlay {
+    width: 100%;
+    height: 100px;
+  }
+
+  .subteam-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+  }
+    
+  .sub-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sub-name p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .sub-name h4{
+    font-size: 23px;
+    text-align: center;
+  }
+  .sub-descr p{
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    
+  }
+
+  .subteam-card{
+    border-width: 20px;
+    margin: auto;
+    width: 95%
+  }
+
+  .contact-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+   .empty-text{
+    display: block;
+    padding: 8px;
+  }
+
 }
