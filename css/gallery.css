@@ -12,6 +12,15 @@
     padding-bottom: 70px;
 }
 
+@media (max-width: 440px){
+ .gallery-grid{
+    
+    display: flex;
+    flex-direction: column;
+  
+ }
+}
+
 .gallery-item {
     overflow: hidden;
     background: #ddd;

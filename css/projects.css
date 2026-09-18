@@ -1,4 +1,4 @@
-.filtering button{
+.filtering button {
     color: black;
     padding: 3px 10px;
     border: 2px solid black;
@@ -10,54 +10,60 @@
 }
 
 
-.project-heading{
+.project-heading {
     color: black;
-    font-size: 35px;
+    font-size: clamp(27px, 6.5vw, 35px);
     font-weight: 700;
     margin: 0;
 }
 
-.project-section .top-bar{
+.project-section .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.filtering{
+
+.filtering {
     display: flex;
     gap: 10px;
 }
 
-.project-section .descr{
+.project-section .descr {
     color: black;
     font-size: 15px;
 }
+
 .project-section {
     width: 100%;
 }
-.black-divider{
+
+.black-divider {
     height: 2px;
     background: black;
     width: 100%;
 }
 
-.projects-container{
+.projects-container {
     display: flex;
     gap: 1px;
 }
-.project{
+
+.project {
     position: relative;
     width: 200px;
     height: 350px;
 
-     opacity: 1;
+    opacity: 1;
     transform: translateX(0) scale(1);
 
     transition:
         opacity 0.3s ease,
         transform 0.4s ease;
 }
-.project p{
-    text-align:center;
+
+
+.project p {
+    text-align: center;
     margin-inline: 20px;
     color: white;
     font-weight: 700;
@@ -66,18 +72,36 @@
     bottom: 0px;
 
 }
+@media (max-width: 440px) {
 
-.filtering .active{
+    .project,
+    .overlay {
+        width: 100%;
+        height: 100px;
+    }
+
+    .project p {
+        text-align: start;
+        font-size: 16px;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.filtering .active {
     background: #ff1d38;
     border: none;
     color: white;
 }
 
-.project img{
+.project img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    
+
 }
 
 .project.fade-out {
@@ -87,4 +111,12 @@
 
 .project.hide {
     display: none;
+}
+
+@media (max-width: 440px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
 }

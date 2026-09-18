@@ -80,3 +80,29 @@ button {
     gap: 30px;
     justify-content: center;
 }
+
+.sponsor-contact-us{
+    width: 1100px;
+}
+
+@media (max-width: 440px){
+    .tier1, .tier2 {
+        flex-direction: column;
+        
+    }
+    .tier1 a, .tier2 a{
+        margin: auto;
+    }
+    .empty-box{
+        display: none;
+    }
+
+    .sponsor-contact-us{
+        width: 100%;
+
+    }
+
+    .sponsor-contacts{
+        flex-direction: column;
+    }
+}
