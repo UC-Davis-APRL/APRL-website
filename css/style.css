@@ -2522,6 +2522,7 @@ p.pun {
   padding-top: clamp(1.5rem, 5vw, 3rem);
   width: 100%;
   max-width: 1200px;
+  margin: auto;
 }
 
 #about-section p {
@@ -2551,7 +2552,7 @@ p.pun {
 .mission {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 
 .mission-list {
@@ -2687,6 +2688,10 @@ p.pun {
   flex-direction: column;
   gap: 10px;
   padding-top: 20px;
+
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
 }
 
 .sub-name,
@@ -2756,6 +2761,12 @@ button:hover {
 
 .empty-text{
   display: none;
+}
+.my-div{
+  display: flex;
+width: 100%;
+max-width: 1200px;
+justify-content: space-between;
 }
 @media (max-width: 440px) {
  
