@@ -4,12 +4,21 @@
  margin-top: 20px;
  margin-bottom: 70px;
 }
+
+#gallery {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     grid-auto-rows: 300px;
-    padding-bottom: 70px;
+    padding-block: 60px;
+    max-width: 1200px;
+    border-top: rgb(255, 29, 56) 4px solid;
+    border-bottom: rgb(255, 29, 56) 4px solid;
 }
 
 @media (max-width: 440px){
