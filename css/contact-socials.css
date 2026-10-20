@@ -112,6 +112,12 @@
             #4303cb 75%, #4303cb 100%);
 }
 
+@media (max-width: 440px) {
+    .bar{
+        width: 150px;
+    }
+}
+
 
 /* email submit status */
 .form-status {

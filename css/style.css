@@ -2471,6 +2471,9 @@ nav .container {
     font-size: 12px;
   }
 
+  .bottom-image{
+    display: none;
+  }
 }
 
 @media (max-width: 1920px) {
