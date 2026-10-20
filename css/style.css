@@ -2471,6 +2471,9 @@ nav .container {
     font-size: 12px;
   }
 
+  .bottom-image{
+    display: none;
+  }
 }
 
 @media (max-width: 1920px) {
@@ -2600,6 +2603,13 @@ p.pun {
   background: black;
   text-align: center;
 
+}
+
+.white-divider {
+  background: white;
+  height: 50px;
+  width: 1px;
+  margin-inline: 15px;
 }
 
 .section-head {
@@ -2751,7 +2761,7 @@ button:hover {
   /* border: transparent; */
 }
 
-.cta-btn:hover {
+.cta-btn:hover, .submit-btn:hover, #donors button:hover{
   background: #ff1d38;
 }
 

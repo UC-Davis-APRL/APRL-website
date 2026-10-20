@@ -1,0 +1,128 @@
+#archives {
+    background: #F9E4BE;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+.archives-logo-container {
+    height: 80px;
+    overflow: hidden;
+    width: 500px;
+}
+
+.newsletter_logo_container {
+    height: 40px;
+    overflow: hidden;
+    width: 300px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.whencowsfly-container {
+    margin-top: -10px;
+    height: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.newsletters_logo,
+.archives-whencowsfly,
+.archives-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#newsletter-subheading {
+    margin-top: -10px;
+    color: #191717;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.archives-line {
+    display: flex;
+    width: 90%;
+    height: 8px;
+    margin: auto;
+}
+
+.archives-line span {
+    height: 100%;
+    width: 25%;
+}
+
+.archives-line .red {
+    background: #ff1744;
+}
+
+.archives-line .blue {
+    background: #3563e9;
+}
+
+.archives-line .violet {
+    background: #4b00cc;
+}
+
+
+.article-container {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    padding: 20px;
+
+    background: #fff3dc;
+    margin-block: 20px;
+}
+
+@media (max-width: 440px) {
+    .article-container {
+        flex-direction: column;
+    }
+    .archives-logo-container{
+        width: 400px;
+    }
+}
+
+.first-issue div {
+    color: #191717;
+    font-weight: 700;
+    border-bottom: 1px solid #191717;
+    padding-block: 15px;
+}
+
+.first-issue div p {
+    margin: 0;
+    font-size: 17px;
+}
+
+.first-issue div .article-title {
+    font-size: 20px;
+}
+
+.article-img {
+    width: 800px;
+    height: auto;
+    border: 2px solid #191717;
+}
+
+.first-issue .download {
+    border: none;
+    text-align: left;
+    font-weight: 600;
+    font-style: italic;
+    padding-bottom: 0px;
+}
+
+.first-issue .download a {
+    color: #191717;
+}
+
+.first-issue .download a:hover {
+    color: #ff1744;
+}

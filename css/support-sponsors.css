@@ -7,6 +7,8 @@
     width: 100%;
 }
 
+
+
 #support-section .heading {
     font-size: 23px;
     color: white;
@@ -37,15 +39,14 @@
     width: 120px;
 }
 
-#sponsors {
-    background: #191717;
+#sponsors, #donors {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-block: 30px;
 }
 
-#sponsors .heading {
+#sponsors .heading, #donors .heading{
     display: flex;
     justify-content: center;
     color: white;
@@ -54,20 +55,21 @@
 
 }
 
-#sponsors .heading p {
+#sponsors .heading p, #donors .heading p{
     font-weight: 600;
     margin: 0;
     font-size: 23px;
+    
 }
 
-.sponsor-text {
+.sponsor-text, .donors-text {
     padding-block: 20px;
     color: white;
     font-size: 16px;
     width: 90%;
 }
 
-#sponsors button {
+#sponsors button, #donors button, .cta button, .submit-btn{
     background: transparent;
     border: 2px #ff1d38 solid;
     color: white;
@@ -77,6 +79,14 @@
     font-size: 18px;
     font-weight: 600;
 }
+.submit-btn{
+    color: #191717;
+    font-size: 16px;
+    padding: 5px 7px;
+}
+.submit-btn:hover{
+    color: #ffff;
+}
 
 .padding-15 {
     padding-block: 15px;
@@ -85,11 +95,62 @@
 .support,
 .sponsors-section,
 .contact,
-.social-section {
+.social-section,
+#archives {
     width: 100%;
     max-width: 1200px;
 }
 
+
+
 button:hover, #sponsors button:hover{
     background:#ff1d38;
 }
+
+#sponsors {
+    background:
+      radial-gradient(
+        ellipse at 100% 0%,
+        rgba(123, 48, 140, 0.55) 0%,
+        transparent 55%
+      ),
+      linear-gradient(
+        120deg,
+        #281633 0%,
+        #29134F 55%,
+        #2D2269 100%
+      );
+  }
+
+  #donors {
+    background:
+      radial-gradient(
+        ellipse at 0% 100%,
+        rgba(134, 83, 54, 0.65) 0%,
+        transparent 65%
+      ),
+      linear-gradient(
+        120deg,
+        #48252D 0%,
+        #28133F 55%,
+        #28134E 100%
+      );
+  }
+
+
+  .sponsors-preview{
+    padding-top: 30px;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  .sponsors-preview div img{
+    width:70px;
+    height: auto;
+
+  }
+
+  .sponsors-preview div{
+    margin:auto;
+  }
