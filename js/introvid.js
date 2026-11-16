@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const videos = [
         "intro_vid.mp4#t=1",
-        "intro_vid_2.mov"
+        "intro_vid_2.mp4",
+        "intro_vid_3.mp4"
     ];
 
     const backgrounds = [

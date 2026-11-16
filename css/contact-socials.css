@@ -134,8 +134,8 @@
 }
 
 .form-status.success {
-    background:rgb(234, 226, 230);
-    color: #2e7d32;
+    background:rgb(206 230 206);
+    color: #1c6020;
     padding: 5px 20px;
 }
 

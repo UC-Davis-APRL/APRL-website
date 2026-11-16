@@ -37,10 +37,10 @@ async function handleSubmit(e) {
 
 form.addEventListener("submit", handleSubmit);
 
-form = $('.contact-form');
-form.submit(function () {
-  $.post(form.attr('action'), $('.contact-form').serialize(), function (data) {
-    $(`#success-contact-form`).text("Your email has been sent!").fadeIn().delay(3000).fadeOut();
-  }, 'json');
-  return false;
-});
+// form = $('.contact-form');
+// form.submit(function () {
+//   $.post(form.attr('action'), $('.contact-form').serialize(), function (data) {
+//     $(`#success-contact-form`).text("Your email has been sent!").fadeIn().delay(3000).fadeOut();
+//   }, 'json');
+//   return false;
+// });
